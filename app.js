@@ -11,11 +11,11 @@ const INITIAL_COLOR = "#2c2c2c"
 
 //css에서도 사이즈 지정해줘야하고 js에서도 사이즈 지정해줘야함!
 canvas.width = 700;
-canvas.height = 500;
+canvas.height = 550;
 
 //기본 배경색 설정
 ctx.fillStyle = "white";
-ctx.fillRect(0, 0, 700, 500);
+ctx.fillRect(0, 0, 700, 550);
 
 //선과 페인트 색, 브러쉬 기본 크기 설정
 ctx.strokeStyle = INITIAL_COLOR;
@@ -81,7 +81,7 @@ function handleModeClick(){
 
 function handleCanvasClick(event){
     if(filling){
-        ctx.fillRect(0, 0, 700, 500);
+        ctx.fillRect(0, 0, 700, 550);
     }
 }
 
@@ -99,7 +99,7 @@ function handleSaveImage(){
 }
 
 function handleClear(){
-    ctx.clearRect(0, 0, 700, 500);
+    ctx.clearRect(0, 0, 700, 550);
 }
 
 
