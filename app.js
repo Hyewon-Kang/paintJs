@@ -1,3 +1,4 @@
+
 const canvas = document.getElementById("jsCanvas");
 const ctx = canvas.getContext("2d");
 const colors = document.getElementsByClassName("jsColor");
@@ -96,6 +97,7 @@ function handleSaveImage(){
     link.download = "PaintJS[EXPORT]";
     link.click();
 }
+
 
 if(canvas){
     canvas.addEventListener("mousemove", onMouseMove);
