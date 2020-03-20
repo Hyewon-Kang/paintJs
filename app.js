@@ -1,21 +1,21 @@
-
 const canvas = document.getElementById("jsCanvas");
 const ctx = canvas.getContext("2d");
 const colors = document.getElementsByClassName("jsColor");
 const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave");
+const clearBtn = document.getElementById("jsClear");
 
 const INITIAL_COLOR = "#2c2c2c"
 
 
 //css에서도 사이즈 지정해줘야하고 js에서도 사이즈 지정해줘야함!
 canvas.width = 700;
-canvas.height = 400;
+canvas.height = 500;
 
 //기본 배경색 설정
 ctx.fillStyle = "white";
-ctx.fillRect(0, 0, 700, 400);
+ctx.fillRect(0, 0, 700, 500);
 
 //선과 페인트 색, 브러쉬 기본 크기 설정
 ctx.strokeStyle = INITIAL_COLOR;
@@ -81,7 +81,7 @@ function handleModeClick(){
 
 function handleCanvasClick(event){
     if(filling){
-        ctx.fillRect(0, 0, 700, 400);
+        ctx.fillRect(0, 0, 700, 500);
     }
 }
 
@@ -96,6 +96,10 @@ function handleSaveImage(){
     link.href = image;
     link.download = "PaintJS[EXPORT]";
     link.click();
+}
+
+function handleClear(){
+    ctx.clearRect(0, 0, 700, 500);
 }
 
 
@@ -122,4 +126,8 @@ if(mode){
 
 if(saveBtn){
     saveBtn.addEventListener("click", handleSaveImage);
+}
+
+if(clearBtn){
+    clearBtn.addEventListener("click", handleClear);
 }
